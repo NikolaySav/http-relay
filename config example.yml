@@ -1,0 +1,7 @@
+port: 7777
+targetUrl: "https://api.telegram.org"
+connectionTimeout: 5
+proxy:
+  url: "socks5://163.172.152.192:1080"
+  username: "kp"
+  password: "myPas123"
