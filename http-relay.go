@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -52,7 +51,7 @@ func handle(w http.ResponseWriter, r *http.Request) {
 	req, err := http.NewRequest(
 		r.Method,
 		fmt.Sprintf("%s%s", env.TargetURL, r.RequestURI),
-		io.Reader(r.Body),
+		r.Body,
 	)
 
 	if err != nil {
